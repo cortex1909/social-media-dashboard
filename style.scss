@@ -18,6 +18,7 @@ $lighttheme: #aeb3cb;
 }
 
 body {
+    margin: auto;
     background-color: #fff;
     width: 375px;
 }
@@ -164,15 +165,15 @@ h4 {
     }
 }
 
-.card-bottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.title {
+    margin-top: 30px;
+    color: $lighttheme;
+}
 
-    .title {
-        margin-top: 30px;
-        color: $lighttheme;
-    }
+.card-bottom {
+    /*     display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
 
     .card {
         background-color: rgba(128, 128, 128, 0.1);
@@ -204,4 +205,116 @@ h4 {
             }
         }
     }
+}
+
+
+//switch
+$transition: .3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$width: 3em;
+$height: $width/2;
+
+.toggle {
+
+    .toggle-control {
+        transition: $transition;
+        width: $width;
+        height: $height;
+        display: block;
+        border: 2px solid $lighttheme;
+        border-radius: $height;
+        background-color: rgba(black, .06);
+        position: relative;
+
+        &:after {
+            transition: $transition;
+            content: "";
+            width: $width/2;
+            height: $height;
+            display: block;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 1px 2px rgba(black, .4), 0 3px 2px rgba(black, .4);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked+.toggle-control {
+            border-color: $darktheme;
+            background-color: $darktheme;
+
+            &:after {
+                left: $width/2;
+            }
+        }
+    }
+
+    .toggle_input {}
+
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        width: 1440px;
+        margin: auto;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+
+        .header {
+            border: none;
+        }
+
+        .switch {
+            .switch-button {
+                margin-left: 15px;
+                margin-top: -3px;
+            }
+        }
+    }
+
+
+    .card-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+
+        .facebook {
+            width: 300px;
+        }
+
+        .twitter {
+            width: 300px;
+        }
+
+        .instagram {
+            width: 300px;
+        }
+
+        .youtube {
+            width: 300px;
+        }
+    }
+
+    .card-bottom {
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+
+            .card {
+                width: 300px;
+            }
+        }
+    }
+
+
 }
