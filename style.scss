@@ -1,0 +1,161 @@
+// mobile 375px, desktop 1440px
+$limegreen: #1db489;
+$BrightRed: #dc414c;
+$Facebook: #198ff5;
+$Twitter: #1ca0f2;
+$Instagram: #fdc468;
+$YouTube: #c4032a;
+//dark
+$darktheme: linear gradient #378fe6 to #3eda82;
+//light
+$lighttheme: #aeb3cb;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+    background-color: #fff;
+    width: 375px;
+}
+
+h2 {
+    padding-bottom: 5px;
+}
+
+h4 {
+    color: $lighttheme;
+}
+
+.username {
+    margin-left: 5px;
+    color: $lighttheme;
+    font-weight: bold;
+}
+
+.number {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.follow {
+    color: $lighttheme;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.arrow-up {
+    color: $limegreen;
+    font-weight: bolder;
+}
+
+.arrow-down {
+    color: $BrightRed;
+    font-weight: bolder;
+}
+
+.container {
+    margin: auto;
+    padding-top: 20px;
+    width: 90%;
+}
+
+.nav {
+    .header {
+        border-bottom: 1px solid $lighttheme;
+        padding-bottom: 20px;
+    }
+
+    .switch {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+}
+
+.card-top {
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+    .facebook {
+        background-color: rgba(128, 128, 128, 0.1);
+        border-top: 5px solid $Facebook;
+        border-radius: 10px 10px 0 0;
+
+        .top {
+            margin-top: 40px;
+            display: inline-flex;
+        }
+
+        .mid {
+            margin-top: 40px;
+        }
+
+        .bottom {
+            margin: 40px 0;
+        }
+    }
+
+    .twitter {
+        background-color: rgba(128, 128, 128, 0.1);
+        border-top: 5px solid $Twitter;
+        border-radius: 10px 10px 0 0;
+
+        .top {
+            margin-top: 40px;
+            display: inline-flex;
+        }
+
+        .mid {
+            margin-top: 40px;
+        }
+
+        .bottom {
+            margin: 40px 0;
+        }
+    }
+
+    .instagram {
+        background-color: rgba(128, 128, 128, 0.1);
+        border-top: 5px solid $Instagram;
+        border-radius: 10px 10px 0 0;
+
+        .top {
+            margin-top: 40px;
+            display: inline-flex;
+        }
+
+        .mid {
+            margin-top: 40px;
+        }
+
+        .bottom {
+            margin: 40px 0;
+        }
+    }
+
+    .youtube {
+        background-color: rgba(128, 128, 128, 0.1);
+        border-top: 5px solid $YouTube;
+        border-radius: 10px 10px 0 0;
+
+        .top {
+            margin-top: 40px;
+            display: inline-flex;
+        }
+
+        .mid {
+            margin-top: 40px;
+        }
+
+        .bottom {
+            margin: 40px 0;
+        }
+    }
+}
