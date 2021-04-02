@@ -1,12 +1,12 @@
 // mobile 375px, desktop 1440px
 $limegreen: #1db489;
 $BrightRed: #dc414c;
-$Facebook: #198ff5;
-$Twitter: #1ca0f2;
+$Facebook: #1488ee;
+$Twitter: #2caeff;
 $Instagram: #fdc468;
 $YouTube: #c4032a;
 //dark
-$darktheme: linear gradient #378fe6 to #3eda82;
+$darktheme: #3eda82;
 //light
 $lighttheme: #aeb3cb;
 
@@ -77,7 +77,7 @@ h4 {
 }
 
 .card-top {
-    height: 1200px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -87,6 +87,7 @@ h4 {
         background-color: rgba(128, 128, 128, 0.1);
         border-top: 5px solid $Facebook;
         border-radius: 10px 10px 0 0;
+        margin-top: 50px;
 
         .top {
             margin-top: 40px;
@@ -106,6 +107,7 @@ h4 {
         background-color: rgba(128, 128, 128, 0.1);
         border-top: 5px solid $Twitter;
         border-radius: 10px 10px 0 0;
+        margin-top: 50px;
 
         .top {
             margin-top: 40px;
@@ -125,6 +127,7 @@ h4 {
         background-color: rgba(128, 128, 128, 0.1);
         border-top: 5px solid $Instagram;
         border-radius: 10px 10px 0 0;
+        margin-top: 50px;
 
         .top {
             margin-top: 40px;
@@ -144,6 +147,7 @@ h4 {
         background-color: rgba(128, 128, 128, 0.1);
         border-top: 5px solid $YouTube;
         border-radius: 10px 10px 0 0;
+        margin-top: 50px;
 
         .top {
             margin-top: 40px;
@@ -156,6 +160,48 @@ h4 {
 
         .bottom {
             margin: 40px 0;
+        }
+    }
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .title {
+        margin-top: 30px;
+        color: $lighttheme;
+    }
+
+    .card {
+        background-color: rgba(128, 128, 128, 0.1);
+        margin: 30px 0;
+        padding: 20px;
+        border-radius: 5px;
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+
+            .atribute {
+                color: $lighttheme;
+                font-weight: bolder;
+            }
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            .arrow-up {
+                margin-top: 20px;
+            }
+
+            .arrow-down {
+                margin-top: 20px;
+            }
         }
     }
 }

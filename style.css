@@ -68,7 +68,6 @@ h4 {
 }
 
 .card-top {
-  height: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,8 +82,9 @@ h4 {
 
 .card-top .facebook {
   background-color: rgba(128, 128, 128, 0.1);
-  border-top: 5px solid #198ff5;
+  border-top: 5px solid #1488ee;
   border-radius: 10px 10px 0 0;
+  margin-top: 50px;
 }
 
 .card-top .facebook .top {
@@ -104,8 +104,9 @@ h4 {
 
 .card-top .twitter {
   background-color: rgba(128, 128, 128, 0.1);
-  border-top: 5px solid #1ca0f2;
+  border-top: 5px solid #2caeff;
   border-radius: 10px 10px 0 0;
+  margin-top: 50px;
 }
 
 .card-top .twitter .top {
@@ -127,6 +128,7 @@ h4 {
   background-color: rgba(128, 128, 128, 0.1);
   border-top: 5px solid #fdc468;
   border-radius: 10px 10px 0 0;
+  margin-top: 50px;
 }
 
 .card-top .instagram .top {
@@ -148,6 +150,7 @@ h4 {
   background-color: rgba(128, 128, 128, 0.1);
   border-top: 5px solid #c4032a;
   border-radius: 10px 10px 0 0;
+  margin-top: 50px;
 }
 
 .card-top .youtube .top {
@@ -163,5 +166,61 @@ h4 {
 
 .card-top .youtube .bottom {
   margin: 40px 0;
+}
+
+.card-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card-bottom .title {
+  margin-top: 30px;
+  color: #aeb3cb;
+}
+
+.card-bottom .card {
+  background-color: rgba(128, 128, 128, 0.1);
+  margin: 30px 0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.card-bottom .card .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-bottom .card .top .atribute {
+  color: #aeb3cb;
+  font-weight: bolder;
+}
+
+.card-bottom .card .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+}
+
+.card-bottom .card .bottom .arrow-up {
+  margin-top: 20px;
+}
+
+.card-bottom .card .bottom .arrow-down {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */
