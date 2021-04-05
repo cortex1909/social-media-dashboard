@@ -7,8 +7,73 @@ $Instagram: #fdc468;
 $YouTube: #c4032a;
 //dark
 $darktheme: #3eda82;
+$darkbgc:#292c3f;
+$dark: #1e202a;
+$dhover: #34374e;
 //light
-$lighttheme: #aeb3cb;
+$lighttheme: #a3a8c0;
+$lhover: rgba(105, 105, 105, 0.178);
+
+.container {
+    background-color: #fff;
+}
+
+[data-theme="dark"] {
+    background-color: $dark;
+
+    body {
+        background-color: $dark;
+        color: #fff;
+    }
+
+    .container {
+        background-color: $dark;
+    }
+
+    .card-top {
+        .facebook {
+            background-color: $darkbgc;
+
+            &:hover {
+                background-color: $dhover;
+            }
+        }
+
+        .instagram {
+            background-color: $darkbgc;
+
+            &:hover {
+                background-color: $dhover;
+            }
+        }
+
+        .twitter {
+            background-color: $darkbgc;
+
+            &:hover {
+                background-color: $dhover;
+            }
+        }
+
+        .youtube {
+            background-color: $darkbgc;
+
+            &:hover {
+                background-color: $dhover;
+            }
+        }
+    }
+
+    .card-bottom {
+        .card {
+            background-color: $darkbgc;
+
+            &:hover {
+                background-color: $dhover;
+            }
+        }
+    }
+}
 
 * {
     box-sizing: border-box;
@@ -102,6 +167,11 @@ h4 {
         .bottom {
             margin: 40px 0;
         }
+
+        &:hover {
+            transition: 1s;
+            background-color: $lhover;
+        }
     }
 
     .twitter {
@@ -121,6 +191,11 @@ h4 {
 
         .bottom {
             margin: 40px 0;
+        }
+
+        &:hover {
+            transition: 1s;
+            background-color: $lhover;
         }
     }
 
@@ -142,6 +217,11 @@ h4 {
         .bottom {
             margin: 40px 0;
         }
+
+        &:hover {
+            transition: 1s;
+            background-color: $lhover;
+        }
     }
 
     .youtube {
@@ -162,6 +242,11 @@ h4 {
         .bottom {
             margin: 40px 0;
         }
+
+        &:hover {
+            transition: 1s;
+            background-color: $lhover;
+        }
     }
 }
 
@@ -180,6 +265,11 @@ h4 {
         margin: 30px 0;
         padding: 20px;
         border-radius: 5px;
+
+        &:hover {
+            transition: 1s;
+            background-color: $lhover;
+        }
 
         .top {
             display: flex;
@@ -208,54 +298,66 @@ h4 {
 }
 
 
-//switch
-$transition: .3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-$width: 3em;
-$height: $width/2;
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
 
-.toggle {
-
-    .toggle-control {
-        transition: $transition;
-        width: $width;
-        height: $height;
-        display: block;
-        border: 2px solid $lighttheme;
-        border-radius: $height;
-        background-color: rgba(black, .06);
-        position: relative;
-
-        &:after {
-            transition: $transition;
-            content: "";
-            width: $width/2;
-            height: $height;
-            display: block;
-            background-color: #fff;
-            border-radius: 50%;
-            box-shadow: 0 1px 2px rgba(black, .4), 0 3px 2px rgba(black, .4);
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+    em {
+        margin-left: 10px;
+        font-size: 1rem;
     }
-
-    input {
-        display: none;
-
-        &:checked+.toggle-control {
-            border-color: $darktheme;
-            background-color: $darktheme;
-
-            &:after {
-                left: $width/2;
-            }
-        }
-    }
-
-    .toggle_input {}
-
 }
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background-color: #66bb6a;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
 
 @media only screen and (min-width: 768px) {
     body {

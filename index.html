@@ -22,13 +22,11 @@
         <h4>Total Followers: 23,004</h4>
       </div>
       <div class="switch">
-        <h4>Dark Mode</h4>
-        <div class="switch-button">
-          <label class="label toggle">
-            <input type="checkbox" class="toggle_input" />
-            <div class="toggle-control"></div>
-          </label>
-        </div>
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round"></div>
+      </div>
       </div>
     </div>
     <div class="card-top">
@@ -188,5 +186,18 @@
   </div>
 
 </body>
-
+<script>
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  
+  function switchTheme(e) {
+      if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      else {
+          document.documentElement.setAttribute('data-theme', 'light');
+      }    
+  }
+  
+  toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
 </html>
